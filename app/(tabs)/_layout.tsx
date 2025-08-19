@@ -47,7 +47,7 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="add"
+        name="add-transaction-type"
         options={{
           title: "Add",
           tabBarIcon: ({ color }) => (
@@ -65,12 +65,18 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="settings"
+        name="profile"
         options={{
-          title: "Settings",
+          title: "Profile",
           tabBarIcon: ({ color }) => (
             <IconSymbol size={28} name="gearshape.fill" color={color} />
           ),
+        }}
+      />
+      <Tabs.Screen
+        name="add-transaction-amount"
+        options={{
+          href: null,
         }}
       />
     </Tabs>

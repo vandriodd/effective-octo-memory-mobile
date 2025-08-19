@@ -44,9 +44,12 @@ module.exports = {
         notification: "#ef4444",
       },
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
-        serif: ["Merriweather", "serif"],
-        mono: ["JetBrains Mono", "monospace"],
+        regular: ["regular"],
+        medium: ["medium"],
+        semibold: ["semiBold"],
+        bold: ["bold"],
+        extrabold: ["extraBold"],
+        black: ["black"],
       },
       borderRadius: {
         sm: "calc(0.5rem - 4px)",

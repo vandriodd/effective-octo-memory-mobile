@@ -5,11 +5,12 @@ import Button from "./ui/button";
 
 const OPTIONS = [
   { label: "LogIn", value: "/login" },
+  { label: "Register", value: "/register" },
   { label: "Home", value: "/home" },
   { label: "Transactions", value: "/transactions" },
   { label: "Budget", value: "/budget" },
   { label: "Profile", value: "/profile" },
-  { label: "Add Transaction", value: "/add" },
+  { label: "Add Transaction", value: "/add-transaction-type" },
 ];
 
 export default function Debugger() {
@@ -27,7 +28,7 @@ export default function Debugger() {
       >
         <View className="flex-1 justify-center items-center bg-black/50">
           <View className="bg-white rounded-lg p-6 shadow-lg mx-4 max-w-sm w-full">
-            <Text className="mb-4 text-center text-lg font-semibold">
+            <Text className="mb-4 text-center text-lg">
               Navigation between screens
             </Text>
             <View className="mb-4 gap-2">
@@ -54,7 +55,7 @@ export default function Debugger() {
           className="bg-primary w-14 h-14 rounded-full justify-center items-center shadow-lg"
           onPress={() => setIsVisible(true)}
         >
-          <Text className="text-white text-xs font-bold">DBG</Text>
+          <Text className="text-white text-xs">DBG</Text>
         </TouchableOpacity>
       </View>
     </>

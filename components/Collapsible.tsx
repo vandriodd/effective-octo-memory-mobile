@@ -1,7 +1,8 @@
 import { PropsWithChildren, useState } from "react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { StyleSheet, TouchableOpacity, View } from "react-native";
 
 import { IconSymbol } from "@/components/ui/IconSymbol";
+import { Text } from "react-native";
 
 export function Collapsible({
   children,
@@ -10,12 +11,15 @@ export function Collapsible({
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <View>
+    <View className="w-full mt-4">
       <TouchableOpacity
         style={styles.heading}
         onPress={() => setIsOpen((value) => !value)}
         activeOpacity={0.8}
+        className="justify-between py-4 mb-4"
       >
+        <Text>{title}</Text>
+
         <IconSymbol
           name="chevron.right"
           size={18}
@@ -23,10 +27,8 @@ export function Collapsible({
           color={"#1A1A1A"}
           style={{ transform: [{ rotate: isOpen ? "90deg" : "0deg" }] }}
         />
-
-        <Text style={{ fontWeight: "600" }}>{title}</Text>
       </TouchableOpacity>
-      {isOpen && <View style={styles.content}>{children}</View>}
+      {isOpen && <View>{children}</View>}
     </View>
   );
 }
@@ -34,11 +36,7 @@ export function Collapsible({
 const styles = StyleSheet.create({
   heading: {
     flexDirection: "row",
-    alignItems: "center",
+    alignItems: "flex-start",
     gap: 6,
-  },
-  content: {
-    marginTop: 6,
-    marginLeft: 24,
   },
 });

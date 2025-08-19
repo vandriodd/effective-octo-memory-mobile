@@ -12,11 +12,16 @@ export default function Login() {
   const [password, setPassword] = useState("");
 
   return (
-    <View className="flex flex-1 justify-center mx-auto">
+    <View className="flex flex-1 justify-center mx-10">
       <View className="flex flex-col items-center gap-4">
         <OcOnTheLaptop />
         <View className="flex flex-col items-center">
-          <Text className="text-5xl font-bold text-primary">Welcome Back!</Text>
+          <Text
+            className="text-5xl text-primary"
+            style={{ fontFamily: "black" }}
+          >
+            Welcome Back!
+          </Text>
           <Text className="text-gray-600">Log In to your account</Text>
         </View>
       </View>

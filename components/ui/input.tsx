@@ -1,12 +1,19 @@
-import { Text, TextInput, TextInputIOSProps, View } from "react-native";
+import {
+  KeyboardTypeOptions,
+  Text,
+  TextInput,
+  TextInputIOSProps,
+  View,
+} from "react-native";
 
 interface InputProps {
   value: string;
-  label: string;
+  label?: string;
   onChange: (text: string) => void;
-  type: TextInputIOSProps["textContentType"];
+  type?: TextInputIOSProps["textContentType"];
   placeholder?: string;
   helperText?: string;
+  keyboardType?: KeyboardTypeOptions;
 }
 
 export default function Input({
@@ -15,7 +22,9 @@ export default function Input({
   label,
   type,
   placeholder = "Enter text",
+  keyboardType = "default",
   helperText,
+  ...props
 }: InputProps) {
   return (
     <View>
@@ -28,6 +37,8 @@ export default function Input({
           className="text-[#23282b] px-4"
           textContentType={type}
           secureTextEntry={type === "password"}
+          keyboardType={keyboardType}
+          {...props}
         />
       </View>
       {helperText && (
