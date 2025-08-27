@@ -65,6 +65,7 @@ export default function AddTransactionAmount() {
                   <Text className="mb-2 text-gray-800">
                     Date of Transaction
                   </Text>
+
                   <View className="h-14 rounded-lg w-full bg-white border border-[#C7C5DE] justify-center mb-2">
                     <Pressable onPress={() => setShowPicker(true)}>
                       <Text className="px-4">{date.toLocaleDateString()}</Text>

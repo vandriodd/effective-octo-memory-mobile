@@ -19,10 +19,7 @@ export default function CategoryButton({
       onPress={onPress}
     >
       <View className="w-8 h-8">{icon}</View>
-      <Text
-        className="text-sm text-[#64618A]"
-        style={{ fontFamily: "regular" }}
-      >
+      <Text className="text-sm text-primary" style={{ fontFamily: "regular" }}>
         {label}
       </Text>
     </Pressable>

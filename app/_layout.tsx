@@ -18,6 +18,18 @@ import "./global.css";
 
 SplashScreen.preventAutoHideAsync();
 
+const MyTheme = {
+  ...DefaultTheme,
+  colors: {
+    ...DefaultTheme.colors,
+    background: "rgb(248 248 248)",
+    primary: "rgb(100 104 240)",
+    card: "rgb(255 255 255)",
+    border: "rgb(208 212 219)",
+    text: "rgb(29 41 61)",
+  },
+};
+
 export default function RootLayout() {
   const [loaded, error] = useFonts({
     regular: Outfit_400Regular,
@@ -39,7 +51,7 @@ export default function RootLayout() {
   }
 
   return (
-    <ThemeProvider value={DefaultTheme}>
+    <ThemeProvider value={MyTheme}>
       <Stack screenOptions={{ headerShown: false }}>
         <Stack.Screen
           name="(tabs)"

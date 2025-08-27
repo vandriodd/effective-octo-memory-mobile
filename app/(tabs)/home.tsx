@@ -1,9 +1,18 @@
-import { Text, View } from "react-native";
+import { ScrollView, View } from "react-native";
+import {
+  SafeAreaProvider,
+  SafeAreaView,
+  initialWindowMetrics,
+} from "react-native-safe-area-context";
 
 export default function HomeScreen() {
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text style={{ fontFamily: "bold" }}>Welcome</Text>
-    </View>
+    <SafeAreaProvider initialMetrics={initialWindowMetrics}>
+      <SafeAreaView>
+        <ScrollView>
+          <View className="flex-1 justify-center items-center mx-10 pb-20"></View>
+        </ScrollView>
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 }

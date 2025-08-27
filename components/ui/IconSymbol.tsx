@@ -25,6 +25,7 @@ const MAPPING = {
   "gearshape.fill": "settings",
   "wallet.bifold.fill": "account-balance-wallet",
   "plus.circle.fill": "add-circle",
+  plus: "add",
 } as IconMapping;
 
 /**
@@ -40,7 +41,7 @@ export function IconSymbol({
 }: {
   name: IconSymbolName;
   size?: number;
-  color: string | OpaqueColorValue;
+  color?: string | OpaqueColorValue;
   style?: StyleProp<TextStyle>;
   weight?: SymbolWeight;
 }) {
