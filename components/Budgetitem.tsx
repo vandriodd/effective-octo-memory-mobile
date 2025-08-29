@@ -16,7 +16,7 @@ export default function BudgetItem({ data }: BudgetItemProps) {
           innerRadius={45}
           data={data}
           centerLabelComponent={() => (
-            <Text className="text-2xl">{`${data[0].value}%`}</Text>
+            <Text className="text-2xl">{data[0].value}%</Text>
           )}
         />
 

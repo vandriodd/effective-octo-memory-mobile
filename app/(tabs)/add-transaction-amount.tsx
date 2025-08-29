@@ -36,7 +36,7 @@ export default function AddTransactionAmount() {
                 className="text-3xl text-primary"
                 style={{ fontFamily: "bold" }}
               >
-                And how much do you spend?
+                And how much did you spend?
               </Text>
             </View>
 

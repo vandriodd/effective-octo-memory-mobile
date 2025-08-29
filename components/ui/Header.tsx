@@ -19,7 +19,7 @@ export default function CustomHeader({
   const navigation = useNavigation();
 
   return (
-    <SafeAreaView className="bg-transparent p-4">
+    <SafeAreaView className="bg-transparent p-4 mt-8">
       <View className="flex flex-row items-center">
         <View className="flex-1 items-start">
           {showBack ? (
